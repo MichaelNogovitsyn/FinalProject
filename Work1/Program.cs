@@ -38,5 +38,3 @@ int CountArr = CountSynbolArray(InitArray, 3);
 string[] ResultArray = new string[CountArr];
 defineArray(InitArray, ResultArray, 3);
 PrintArray(ResultArray);
-
-//System.Console.WriteLine(CountArr);
