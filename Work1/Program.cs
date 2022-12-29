@@ -7,14 +7,14 @@ int CountSynbolArray(string[] array, int numSymb)
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= numSymb)
-        count++;
+            count++;
     }
     return count;
 }
 
 void defineArray(string[] array, string[] newArray, int numSymb)
 {
-for (int i = 0, j = 0; i < array.Length; i++)
+    for (int i = 0, j = 0; i < array.Length; i++)
     {
         if (array[i].Length <= numSymb)
         {
@@ -24,6 +24,19 @@ for (int i = 0, j = 0; i < array.Length; i++)
     }
 }
 
-int CountArr = CountSynbolArray(InitArray,3);
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
+    }
+    Console.WriteLine("]");
+}
+int CountArr = CountSynbolArray(InitArray, 3);
+string[] ResultArray = new string[CountArr];
+defineArray(InitArray, ResultArray, 3);
+PrintArray(ResultArray);
 
 //System.Console.WriteLine(CountArr);
